@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error Page should render the Home page correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="main"
+  >
+    heloo
+  </div>
+</DocumentFragment>
+`;

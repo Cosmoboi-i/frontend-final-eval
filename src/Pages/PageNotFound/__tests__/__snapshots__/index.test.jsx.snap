@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error Page should render the Error page correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="error"
+  >
+    <h1>
+      404
+    </h1>
+    <div>
+      Page Not Found
+    </div>
+  </div>
+</DocumentFragment>
+`;

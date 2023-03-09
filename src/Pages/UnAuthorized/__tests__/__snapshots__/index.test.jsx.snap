@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error Page should render the Error page correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="error"
+  >
+    <h1 />
+    <div>
+      Something went wrong!
+    </div>
+  </div>
+</DocumentFragment>
+`;
