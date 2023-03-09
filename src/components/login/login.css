@@ -2,4 +2,67 @@
   height: 100vh;
   width: 40vw;
   background: rgb(29, 27, 28);
+  color: white;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.heading {
+  margin: 0;
+  padding: 10rem 0;
+}
+
+.input-container {
+  width: 20rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.label {
+  padding: 0.5rem 0;
+  color: rgb(150, 150, 150);
+  font-size: 1rem;
+
+}
+
+.login-input {
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 7px;
+  border: none;
+
+  margin-bottom: 1.5rem;
+}
+
+.login-button {
+  height: 3rem;
+  width: 20.5rem;
+  border-radius: 7px;
+  border: none;
+  background: rgb(142, 55, 249);
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+
+  
+  margin: 1.5rem 0;
+}
+
+.forgot-password {
+  align-self: center;
+  text-decoration: underline;
+  color: rgb(150, 150, 150);
+
+}
+
+@media only screen and (max-width: 1300px) {
+  .login {
+    width: 100vw;
+  }
+}
+
