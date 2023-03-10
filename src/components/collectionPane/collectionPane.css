@@ -21,4 +21,22 @@
 
 .collectionpane-body {
   display: flex;
+  flex-direction: column;
+}
+
+.collectionpane-list {
+  width: 100%;
+  padding-left: 2rem;
+}
+
+.collectionpane-list-header {
+  height: 4rem;
+  width: 90%;
+  border-radius: 0.8rem;
+  background: var(--lightgrey);
+  align-self: center;
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

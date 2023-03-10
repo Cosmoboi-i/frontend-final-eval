@@ -32,7 +32,11 @@ export default function Home() {
     <ProtectedRoutes>
       <div className="home">
         <SidePane types={types} setIsBuilderOpen={setIsBuilderOpen} handleType={handleType} />
-        {isBuilderOpen ? <ContentPane types={types} /> : <CollectionPane tid={tid} types={types} />}
+        {isBuilderOpen ? (
+          <ContentPane types={types} />
+        ) : (
+          <CollectionPane tid={tid} type={types.find((type) => type.id === tid)} />
+        )}
       </div>
     </ProtectedRoutes>
   );

@@ -7,7 +7,7 @@ export default async function makeRequest(
 ) {
   try {
     const token = localStorage.getItem("token");
-    console.log(token)
+    console.log('tokennnnnnnnnnnnnnn', token)
     const params = {
       url: endPoint.url,
       method: endPoint.method,

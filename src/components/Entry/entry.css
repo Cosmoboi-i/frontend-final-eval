@@ -2,9 +2,10 @@
   height: 4rem;
   width: 90%;
   border-radius: 0.8rem;
-  background: rgb(247, 243, 250);
+  background: rgb(255, 255, 255);
   
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  align-self: center;
 }

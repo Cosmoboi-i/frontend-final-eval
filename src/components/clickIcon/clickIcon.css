@@ -10,3 +10,8 @@
   background-image: url('./../../../public/assets/pencil.png');
   background-size: cover;
 }
+
+.delete {
+  background-image: url('./../../../public/assets/trash-delete-recycle-bin-bucket-waste@3x.png');
+  background-size: cover;
+}

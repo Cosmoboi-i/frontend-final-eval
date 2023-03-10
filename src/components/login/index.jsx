@@ -1,21 +1,48 @@
 import React, { useState } from 'react';
-import { LOGIN } from '../../constants/apiEndPoints';
+import { LOGIN, REGISTER } from '../../constants/apiEndPoints';
 import makeRequest from '../../utils/makeRequest';
 import './login.css';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { HOME_ROUTE } from '../../constants/paths';
 
-export default function Login({ isRegister = false }) {
+export default function Login({ isRegister }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleRegister = () => {
-    return;
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    const path = isRegister ? '/login' : '/register';
+    navigate(path);
+  };
+
+  const handleRegister = async () => {
+    if (email !== '' && password !== '') {
+      try {
+        const res = await axios.post(REGISTER.url, {
+          email,
+          password,
+        });
+        console.log('registered successfully', res.data);
+        setEmail('');
+        setPassword('');
+      } catch (e) {
+        console.log('sdsddddd', e);
+      }
+    }
   };
 
   const handleLogin = async () => {
     if (email !== '' && password !== '') {
       try {
-        const res = await makeRequest(LOGIN, { data: { email, password } });
-        console.log('this is res', res);
+        const res = await axios.post(LOGIN.url, {
+          email,
+          password,
+        });
+        console.log('logged in successfully', res.data);
+        localStorage.setItem('token', res.data.token);
+        navigate(HOME_ROUTE);
         setEmail('');
         setPassword('');
       } catch (e) {
@@ -45,6 +72,9 @@ export default function Login({ isRegister = false }) {
           {isRegister ? 'Register' : 'Login'}
         </button>
         <div className="forgot-password">Forgot password?</div>
+        <div className="forgot-password" onClick={handleNavigate}>
+          {isRegister ? 'Login' : 'Register'}
+        </div>
       </div>
     </div>
   );
