@@ -1,0 +1,14 @@
+.field {
+  margin: 0.6rem;
+  display: flex;
+  height: 4rem;
+  width: 90%;
+  border-radius: 0.8rem;
+  background: rgb(247, 243, 250);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  align-self: center;
+}

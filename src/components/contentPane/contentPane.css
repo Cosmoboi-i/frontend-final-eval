@@ -1,0 +1,70 @@
+.contentpane {
+  height: 100vh;
+  width: 80vw;
+  background: var(--lightgrey);
+}
+
+.contentpane-header {
+  height: 7.5vh;
+  width: 100%;
+  background: white;
+  color: rgb(59, 59, 59);
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding: 0 1.5rem;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+.contentpane-body {
+  display: flex;
+}
+
+.content-types {
+  height: 92.5vh;
+  width: 23vw;
+  background: var(--darkgrey);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.type-adder {
+  margin: 3rem 0;
+  height: 4rem;
+  width: 80%;
+  border: 2px dashed var(--purple);
+  border-radius: 0.8rem;
+  color: var(--purple);
+  background: rgb(247, 243, 250);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-type-item {
+  height: 4rem;
+  width: 100%;
+  border-radius: 0.8rem;
+  background: rgb(247, 243, 250);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.type-list {
+  width: 80%;
+}
+
+.content-fields {
+  height: 92.5vh;
+  width: 57vw;
+  background: var(--lightgrey);
+  padding: 0 1.5rem;
+}

@@ -1,0 +1,12 @@
+.icon {
+  height : 1.7rem;
+  width: 1.7rem;
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+.pencil {
+  background-image: url('./../../../public/assets/pencil.png');
+  background-size: cover;
+}

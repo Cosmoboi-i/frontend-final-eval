@@ -1,0 +1,65 @@
+.sidepane {
+  height: 100vh;
+  width: 21vw;
+  display: flex;
+  flex-direction: column;
+} 
+
+.sidepane-header {
+  height: 7.5vh;
+  width: 100%;
+  background: var(--purple);
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0 1.5rem;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+.sidepane-body {
+  background: rgb(34, 30, 30);
+  color: white;
+  padding: 3rem 0 3rem 0;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.sidepane-types {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem;
+}
+
+.type-heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.types {
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.type-item {
+  margin: 1.1rem 0;
+}
+
+.type-builder {
+  padding: 0.5rem 1.5rem;
+  width: 100%;
+  background: black;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+

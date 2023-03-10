@@ -2,4 +2,9 @@
   font-family: montserrat;
   min-height: 100vh;
   width: 100vw;
+
+  --purple: #5906CE;
+  --lightgrey: #EAEEFE;
+  --black: #272727;
+  --darkgrey: #D3D6E5;
 }
