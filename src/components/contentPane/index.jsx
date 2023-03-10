@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
+import { ADD_NEW_TYPE } from '../../constants/apiEndPoints';
+import makeRequest from '../../utils/makeRequest';
 import Modal from '../modal';
 import TypeDetails from '../typeDetails';
 import './contentPane.css';
 
-export default function ContentPane({ types }) {
+export default function ContentPane({ types, setTypes }) {
   const [activeType, setActiveType] = React.useState({});
 
   const handleActiveType = (id) => {
@@ -13,11 +15,25 @@ export default function ContentPane({ types }) {
 
   useEffect(() => {
     if (types && types.length) {
-      setActiveType(types[1]);
+      setActiveType(types[0]);
     }
   }, [types]);
 
-  const makeNewType = () => {};
+  const makeNewType = async () => {
+    const name = prompt('Enter name of new type');
+    const newType = {
+      name,
+      structure: {},
+    };
+    setTypes((prev) => [...prev, newType]);
+    setActiveType(newType);
+    try {
+      const res = await makeRequest(ADD_NEW_TYPE, { data: newType });
+      console.log('this is res', res);
+    } catch (e) {
+      console.log('error', e);
+    }
+  };
 
   useEffect(() => {
     console.log('activeType', activeType);
@@ -40,7 +56,7 @@ export default function ContentPane({ types }) {
               ))}
           </div>
         </div>
-        <TypeDetails activeType={activeType} setActiveType={setActiveType} />
+        <TypeDetails activeType={activeType} setActiveType={setActiveType} setTypes={setTypes} />
       </div>
     </div>
   );

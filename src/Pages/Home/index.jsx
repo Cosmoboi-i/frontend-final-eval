@@ -19,6 +19,7 @@ export default function Home() {
     try {
       const res = await makeRequest(GET_ALL_TYPES);
       setTypes(res.contentTypes);
+      console.log('this is res', res);
     } catch (e) {
       console.log('error', e);
     }
@@ -33,7 +34,7 @@ export default function Home() {
       <div className="home">
         <SidePane types={types} setIsBuilderOpen={setIsBuilderOpen} handleType={handleType} />
         {isBuilderOpen ? (
-          <ContentPane types={types} />
+          <ContentPane types={types} setTypes={setTypes} />
         ) : (
           <CollectionPane tid={tid} type={types.find((type) => type.id === tid)} />
         )}
